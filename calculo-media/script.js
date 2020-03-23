@@ -14,12 +14,18 @@ function mediana(){
 
     let resultado = (n1 + n2 + n3 + n4)/4
 
-    if (resultado >= 7){
-        resposta.innerHTML = ('Aluno APROVADO, PARABÉNS, Sua média foi: '+resultado)
+    if (resultado >= 7 && resultado == 10){
+        resposta.innerHTML = ('Aluno APROVADO COM MÉRITOS, Sua média foi: '+resultado)
+        resposta.style.color = '#00ff36'    
+    }else if (resultado >= 7){
+        resposta.innerHTML = ('Aluno Aprovado sua, média foi: '+resultado)
+        resposta.style.color = '#fff'
     }else if (resultado < 7 && resultado >= 5){
         resposta.innerHTML = ('Aluno esta de Recuperação, Sua média foi: '+resultado)
+        resposta.style.color = '#ffc50d'
     }else{
         resposta.innerHTML = ('Aluno Reprovado, sua média é: '+resultado)
+        resposta.style.color = '#ff1934'
     }
 
 }
